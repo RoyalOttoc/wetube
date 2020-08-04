@@ -374,6 +374,7 @@ input[type="submit"] {
     width: 100%;
     height: 30px;
     max-width: 320px;
+    background-color: #444444;
     display: -webkit-box;
     display: -webkit-flex;
     display: -moz-box;
@@ -394,12 +395,8 @@ input[type="submit"] {
     .social-login button span {
       margin-right: 10px;
       font-size: 20px; }
-  .social-login .social-login--github {
-    background-color: #444444;
-    color: white; }
-  .social-login .social-login--facebook {
-    background-color: #3a5998;
-    color: white; }
+    .social-login button a {
+      color: white; }
 
 .videoBlock video {
   margin-bottom: 10px;
