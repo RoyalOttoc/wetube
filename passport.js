@@ -1,8 +1,10 @@
 import passport from "passport";
 import GithubStrategy from "passport-github";
-// import User from "./models/";
+import User from "./models/User";
 import { githubLoginCallback } from "./controllers/userController";
 import routes from "./routes";
+
+passport.use(User.createStrategy());
 
 passport.use(
   new GithubStrategy(
@@ -16,11 +18,14 @@ passport.use(
   )
 );
 
+// passport.serializeUser(User.serializeUser());
+// passport.deserializeUser(User.deserializeUser());
 passport.serializeUser(function(user, done) {
-  done(null, user);
+  done(null, user.id);
 });
 
-passport.deserializeUser(function(user, done) {
-  done(null, user);
-  console.log(user);
+passport.deserializeUser(function(id, done) {
+  User.findById(id, function(err, user) {
+    done(err, user);
+  });
 });
