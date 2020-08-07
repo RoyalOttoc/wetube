@@ -23,13 +23,14 @@
       }
       ul {
         display: flex;
+
         text-transform: uppercase;
-        li:not(:last-child) {
-          margin-right: 15px;
-        }
         a {
           color: white;
           font-weight: 600;
+        }
+        li:not(:last-child) {
+          margin-right: 15px;
         }
       }
       form {
@@ -39,9 +40,9 @@
           width: 100%;
           border-radius: 5px;
           font-size: 14px;
-          max-width: none;
           color: $black;
           font-weight: 600;
+          max-width: none;
           &::placeholder {
             font-weight: 300;
             color: rgba(0, 0, 0, 0.7);

@@ -163,6 +163,7 @@ main {
   margin: 0 auto;
   min-height: 70vh; }
 
+button,
 input:not([type="file"]),
 textarea,
 .fileUpload {
@@ -178,21 +179,22 @@ textarea,
   background-color: white;
   max-width: 320px;
   resize: none; }
-  input:not([type="file"])::-webkit-input-placeholder, textarea::-webkit-input-placeholder, .fileUpload::-webkit-input-placeholder {
+  button::-webkit-input-placeholder, input:not([type="file"])::-webkit-input-placeholder, textarea::-webkit-input-placeholder, .fileUpload::-webkit-input-placeholder {
     font-weight: 300;
     color: rgba(0, 0, 0, 0.7); }
-  input:not([type="file"]):-moz-placeholder, textarea:-moz-placeholder, .fileUpload:-moz-placeholder {
+  button:-moz-placeholder, input:not([type="file"]):-moz-placeholder, textarea:-moz-placeholder, .fileUpload:-moz-placeholder {
     font-weight: 300;
     color: rgba(0, 0, 0, 0.7); }
-  input:not([type="file"])::-moz-placeholder, textarea::-moz-placeholder, .fileUpload::-moz-placeholder {
+  button::-moz-placeholder, input:not([type="file"])::-moz-placeholder, textarea::-moz-placeholder, .fileUpload::-moz-placeholder {
     font-weight: 300;
     color: rgba(0, 0, 0, 0.7); }
-  input:not([type="file"]):-ms-input-placeholder, textarea:-ms-input-placeholder, .fileUpload:-ms-input-placeholder {
+  button:-ms-input-placeholder, input:not([type="file"]):-ms-input-placeholder, textarea:-ms-input-placeholder, .fileUpload:-ms-input-placeholder {
     font-weight: 300;
     color: rgba(0, 0, 0, 0.7); }
-  input:not([type="file"])::-ms-input-placeholder, textarea::-ms-input-placeholder, .fileUpload::-ms-input-placeholder {
+  button::-ms-input-placeholder, input:not([type="file"])::-ms-input-placeholder, textarea::-ms-input-placeholder, .fileUpload::-ms-input-placeholder {
     font-weight: 300;
     color: rgba(0, 0, 0, 0.7); }
+  button::placeholder,
   input:not([type="file"])::placeholder,
   textarea::placeholder,
   .fileUpload::placeholder {
@@ -241,11 +243,11 @@ input[type="submit"] {
       display: -ms-flexbox;
       display: flex;
       text-transform: uppercase; }
-      .header .header__wrapper .header__column ul li:not(:last-child) {
-        margin-right: 15px; }
       .header .header__wrapper .header__column ul a {
         color: white;
         font-weight: 600; }
+      .header .header__wrapper .header__column ul li:not(:last-child) {
+        margin-right: 15px; }
     .header .header__wrapper .header__column form {
       width: 100%; }
       .header .header__wrapper .header__column form input {
@@ -255,9 +257,9 @@ input[type="submit"] {
            -moz-border-radius: 5px;
                 border-radius: 5px;
         font-size: 14px;
-        max-width: none;
         color: #444444;
-        font-weight: 600; }
+        font-weight: 600;
+        max-width: none; }
         .header .header__wrapper .header__column form input::-webkit-input-placeholder {
           font-weight: 300;
           color: rgba(0, 0, 0, 0.7); }
@@ -379,9 +381,7 @@ input[type="submit"] {
   width: 100%; }
   .social-login button {
     width: 100%;
-    height: 30px;
     max-width: 320px;
-    background-color: #444444;
     display: -webkit-box;
     display: -webkit-flex;
     display: -moz-box;
@@ -396,14 +396,15 @@ input[type="submit"] {
     -webkit-align-items: center;
        -moz-box-align: center;
         -ms-flex-align: center;
-            align-items: center; }
+            align-items: center;
+    background-color: #444444; }
     .social-login button:not(:last-child) {
       margin-bottom: 15px; }
     .social-login button span {
       margin-right: 10px;
       font-size: 20px; }
-    .social-login button a {
-      color: white; }
+  .social-login a {
+    color: white; }
 
 .videoBlock video {
   margin-bottom: 10px;
@@ -451,6 +452,8 @@ input[type="submit"] {
     .video-detail__container .video__info button {
       width: 100px;
       margin-bottom: 25px; }
+    .video-detail__container .video__info .video__author a {
+      color: #3498db; }
     .video-detail__container .video__info .video__title,
     .video-detail__container .video__info .video__views,
     .video-detail__container .video__info .video__description {
@@ -505,7 +508,8 @@ input[type="submit"] {
        -moz-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    margin-bottom: 18px; }
+    margin-bottom: 18px;
+    margin-bottom: 50px; }
     .user-profile .user-profile__header .profile__username {
       font-size: 18px;
       margin-top: 15px; }
@@ -529,4 +533,3 @@ input[type="submit"] {
             align-items: center; }
     .user-profile .user-profile__btns a:not(:last-child) {
       margin-bottom: 20px; }
-

@@ -1,4 +1,3 @@
-/* eslint-disable prettier/prettier */
 import express from "express";
 import routes from "../routes";
 import {
@@ -7,13 +6,13 @@ import {
   videoDetail,
   deleteVideo,
   getEditVideo,
-  postEditVideo,
+  postEditVideo
 } from "../controllers/videoController";
 import { uploadVideo, onlyPrivate } from "../middlewares";
 
 const videoRouter = express.Router();
 
-// upload
+// Upload
 videoRouter.get(routes.upload, onlyPrivate, getUpload);
 videoRouter.post(routes.upload, onlyPrivate, uploadVideo, postUpload);
 
